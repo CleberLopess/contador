@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contador </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!-- add Jquery CDN -->
+    <link href src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen"></script> <!-- add bootstrap css CDN --> 
+</head>
+
+<style>
+
+    body{
+        background-color: green;
+        color: red;
+    }
+
+    span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        font-family: Nunito;
+        font-size: 100px;
+        font-weight: 600;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #fff;
+    }
+
+    button{
+        display: flex;
+        transform: translate(11rem, 30rem);
+    }
+
+</style>
+<body >
+
+    <span class="badge"> 1000 </span>
+    <button class="btn btn-primary" type="button">-1</button>
+
+    <script>
+    var contador = document.querySelector('.badge');
+    document.querySelector('button').addEventListener('click', function(){
+    var numero = parseInt(contador.textContent) -1;
+    contador.textContent = numero;
+    });
+    </script>
+
+</body>
+</html>
